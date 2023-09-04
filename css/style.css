@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.sec {
+  padding: 10rem 0;
+}
+
+.inner {
+  max-width: 121.2rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.TopBanner {
+  position: relative;
+  background: #008850;
+  height: 16rem;
+  overflow: hidden;
+}
+.TopBanner.on {
+  height: 0;
+  transition: height 0.4s;
+}
+.TopBanner .itm01 a {
+  background-image: url(../../images/top_banner1.png);
+}
+.TopBanner .itm02 a {
+  background-image: url(../../images/top_banner2.jpg);
+}
+.TopBanner .itm03 a {
+  background-image: url(../../images/top_banner3.png);
+}
+.TopBanner .itm04 a {
+  background-image: url(../../images/top_banner4.jpg);
+}
+.TopBanner .itm a {
+  display: block;
+  height: 16rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.TopBanner .dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  display: flex;
+  gap: 8px;
+}
+.TopBanner .dots li {
+  display: flex;
+  align-items: center;
+  width: 4px;
+  height: 10px;
+}
+.TopBanner .dots li a {
+  display: block;
+  width: 4px;
+  height: 5px;
+  background: #f9f9f9;
+  transition: height 0.2s;
+}
+.TopBanner .dots li.on a {
+  height: 10px;
+}
+.TopBanner .close {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  margin-left: 60.6rem;
+  transform: translate(-100%, 0);
+  z-index: 999;
+}
+.TopBanner .close .icon {
+  color: #f9f9f9;
+  font-size: 3.2rem;
+  font-variation-settings: "wght" 200;
+}/*# sourceMappingURL=style.css.map */
