@@ -1,5 +1,4 @@
 .TopBanner {
-    position: relative;
     background: $primary-color;
     height: 16rem;
     overflow: hidden;
@@ -11,25 +10,19 @@
 
     .itm01 {
         a {
-            background-image: url(../../images/top_banner1.png);
+            background-image: url(../images/banner01.jpg);
         }
     }
 
     .itm02 {
         a {
-            background-image: url(../../images/top_banner2.jpg);
+            background-image: url(../images/banner02.png);
         }
     }
 
     .itm03 {
         a {
-            background-image: url(../../images/top_banner3.png);
-        }
-    }
-
-    .itm04 {
-        a {
-            background-image: url(../../images/top_banner4.jpg);
+            background-image: url(../images/banner03.jpg);
         }
     }
 
@@ -62,7 +55,7 @@
                 width: 4px;
                 height: 5px;
                 background: $light-color;
-                transition: height 0.2s;
+                transition: height 0.4s;
             }
 
             &.on {
@@ -88,4 +81,6 @@
                 'wght' 200,
         }
     }
+
+
 }

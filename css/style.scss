@@ -3,4 +3,9 @@
 @import './assets/base';
 
 @import './layout/TopBanner';
-// 읽는 순서 중요
+@import './layout/Header';
+@import './layout/Main';
+@import './layout/MainVisual';
+@import './layout/MainContent';
+@import './layout/MainPortfolio';
+@import './layout/MainSolution';
