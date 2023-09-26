@@ -13,6 +13,12 @@
     <link rel="shortcut icon" href="./images/favicon.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./js/youtube_api_custom.js" defer></script>
+    <script src="./js/scrollTop.js" defer></script>
     <script src="./js/custom.js" defer></script>
 </head>
 
@@ -70,7 +76,27 @@
                     </ul>
                 </nav>
                 <div class="util">
-                    나머지들...
+                    <ul class="ir">
+                        <li><a href="">주요 프로젝트</a></li>
+                        <li><a href="">IR</a></li>
+                    </ul>
+                    <div class="lang">
+                        <a href="">
+                            <i class="xi-globus"></i>
+                            <span>KOR</span>
+                            <i class="xi-angle-down-min arrow"></i>
+                        </a>
+                        <ul>
+                            <li><a href="">KOR</a></li>
+                            <li><a href="">ENG</a></li>
+                            <li><a href="">CHN</a></li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <i class="xi-search"></i>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -85,21 +111,6 @@
                                 <strong>The No.1 for 16 years,<br />we continue to make history of<br />elevators in
                                     Korea</strong>
                                 <p>16년 연속 1위로 대한민국 엘리베이터의 역사를 만들어 갑니다.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide itm itm02">
-                            <div class="slogan">
-                                <strong>The world expands<br />along the new path created<br />by Hyundai
-                                    Elevator</strong>
-                                <p>현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide itm itm01">
-                            <div class="slogan">
-                                <strong>The No.1 for 16 years,<br />we continue to make history of<br />elevators in
-                                    Korea</strong>
-                                <p>16년 연속 1위로 대한민국 엘리베이터의 역사를 만들어 갑니다.</p>
-
                             </div>
                         </div>
                         <div class="swiper-slide itm itm02">
@@ -125,12 +136,6 @@
                 </div>
                 <ul class="right_link">
                     <li class="on">
-                        <a href="">부산국제금융센터 (BIFC)</a>
-                    </li>
-                    <li>
-                        <a href="">바라얍 메르디안 호텔 (터키)</a>
-                    </li>
-                    <li>
                         <a href="">부산국제금융센터 (BIFC)</a>
                     </li>
                     <li>
@@ -472,19 +477,136 @@
                         <li><button><span class="blind">slide 09</span></button></li>
                     </ul>
             </section>
-            <section class="sec MainPrimotion">
+            <section class="sec MainPromotion">
                 <div class="tit_wrap">
-                    <h2>클린 무빙 솔루션</h2>
-                    <p>접촉 없이 편하게 이동합니다.</p>
+                    <h2>홍보영상</h2>
+                    <p>건물 특성에 맞는 다양한 제품으로 고객의 요구를 충족시켜드립니다. </p>
                 </div>
                 <div class="promotion_movie_wrap">
+                    <div id="promotion_movie">
+                        <span class="blind">promotion movie</span>
+                    </div>
+                    <a class="movie_btn">
+                        <span class="blind">promotion movie play</span>
+                    </a>
+                </div>
 
+            </section>
+            <section class="sec MainNews">
+                <div class="tit_wrap">
+                    <h2>현대엘리베이터 소식</h2>
+                    <p>현대엘리베이터의 새소식을 전해드립니다.</p>
+                </div>
+                <div class="f_inner content">
+                    <figure>
+                        <a href="">
+                            <div class="img_wrap">
+                                <img src="./images/main_news01.jpg" alt="">
+                            </div>
+                            <strong>보도자료</strong>
+                            <p>단순한 수직운송수단을 넘어 빌딩의 가치를
+                                높여 드립니다.</p>
+                            <span>2023.08.11</span>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="">
+                            <div class="img_wrap">
+                                <img src="./images/main_news02.jpg" alt="">
+                            </div>
+                            <strong>보도자료</strong>
+                            <p>현대엘리베이터 중국법인 30주년…시장점유율 5.9% 목표 밝혀</p>
+                            <span>2023.08.11</span>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="">
+                            <div class="img_wrap">
+                                <img src="./images/main_news03.jpg" alt="">
+                            </div>
+                            <strong>보도자료</strong>
+                            <p>현대엘리베이터, 충주시에 수재의연금 5천만원 기탁</p>
+                            <span>2023.08.11</span>
+                        </a>
+                    </figure>
                 </div>
             </section>
         </main>
 
         <footer class="Footer">
-
+            <div class="f_top">
+                <div class="f_inner customer_content">
+                    <ul class="left">
+                        <li><a href=""><span>개인정보처리방침</span></a></li>
+                        <li><a href="">사이버신문고 현대 </a></li>
+                        <li><a href="">고객케어센터 <span class="tel">1577-0603</span></a></li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="">증명서 발급조회</a>
+                            <dl class="link">
+                                <dt>증명서 발급조회</dt>
+                                <dd><a href="">사용인감신고서 발급 조회</a></dd>
+                                <dd><a href="">재직증명서 발급 조회</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">인트라넷</a>
+                            <dl class="link">
+                                <dt>인트라넷</dt>
+                                <dd><a href="">자재협력시스템</a></dd>
+                                <dd><a href="">인사정보시스템</a></dd>
+                                <dd><a href="">그룹웨어</a></dd>
+                                <dd><a href="">디지털세금계산서</a></dd>
+                                <dd><a href="">전자구매입찰</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="">패밀리사이트</span></a>
+                            <dl class="link">
+                                <dt>패밀리사이트</dt>
+                                <dd><a href="" target="_blank">현대아산</a></dd>
+                                <dd><a href="" target="_blank">현대무벡스</a></dd>
+                                <dd><a href="" target="_blank">현대경제연구원 </a></dd>
+                                <dd><a href="" target="_blank">현대투자파트너스 </a></dd>
+                                <dd><a href="" target="_blank">현대글로벌</a></dd>
+                                <dd><a href="" target="_blank">에이블현대호텔앤리조트</a></dd>
+                                <dd><a href="" target="_blank">현대종합연수원</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div class="f_inner customer_content">
+                    <address>
+                        충청북도 충주시 충주산단1로 128 현대엘리베이터<br />
+                        COPYRIGHT &copy; 2018 HYUNDAIELEVATOR CO.,LTD. ALL RIGHTS RESERVED
+                    </address>
+                    <ul class="sns">
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">
+                                <i class="xi-youtube-play"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="to_top">
+                <button>
+                    <i class="xi-arrow-top"></i>
+                </button>
+            </div>
         </footer>
     </div>
 
